@@ -1,7 +1,7 @@
 [project]
 name = "ComfyUI-AlwaysOnline"
-description = "test node publish"
-version = "1.0.0"
+description = "🚬This nodes includes video automatic watermarking, multi line text merging, text replacement, GLM4V local image to text inference and text to text inference, and JSON value retrieval based on keys 😊"
+version = "1.0.1"
 license = {file = "LICENSE"}
 
 [project.urls]
