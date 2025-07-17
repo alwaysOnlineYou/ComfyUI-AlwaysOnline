@@ -1,0 +1,1281 @@
+{
+  "id": "6f33c1b5-223f-42da-a208-5748f58c1fee",
+  "revision": 0,
+  "last_node_id": 30,
+  "last_link_id": 32,
+  "nodes": [
+    {
+      "id": 8,
+      "type": "Text Multiline",
+      "pos": [
+        327.4833068847656,
+        429.0274353027344
+      ],
+      "size": [
+        210,
+        93
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            14
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "was-node-suite-comfyui",
+        "ver": "ea935d1044ae5a26efa54ebeb18fe9020af49a45",
+        "Node name for S&R": "Text Multiline",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "lora提示词",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 6,
+      "type": "ShowText|pysssss",
+      "pos": [
+        806.0494995117188,
+        153
+      ],
+      "size": [
+        210,
+        194.36363220214844
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 15
+        }
+      ],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "aac13aa7ce35b07d43633c3bbe654a38c00d74f5",
+        "Node name for S&R": "ShowText|pysssss",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "(full body shot:1.3), (detailed face:1.2), A woman is standing on the beach, lora提示词"
+      ]
+    },
+    {
+      "id": 7,
+      "type": "Text Multiline",
+      "pos": [
+        325.418701171875,
+        292.8838806152344
+      ],
+      "size": [
+        210,
+        93
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            13
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "was-node-suite-comfyui",
+        "ver": "ea935d1044ae5a26efa54ebeb18fe9020af49a45",
+        "Node name for S&R": "Text Multiline",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "A woman is standing on the beach",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 9,
+      "type": "Text Multiline",
+      "pos": [
+        325.30975341796875,
+        153
+      ],
+      "size": [
+        210,
+        93
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            12
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "was-node-suite-comfyui",
+        "ver": "ea935d1044ae5a26efa54ebeb18fe9020af49a45",
+        "Node name for S&R": "Text Multiline",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "(full body shot:1.3), (detailed face:1.2)",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 12,
+      "type": "MultilineTextMerger",
+      "pos": [
+        570.9002075195312,
+        155.39993286132812
+      ],
+      "size": [
+        210,
+        401
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "text1",
+          "name": "text1",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "text1"
+          },
+          "link": 12
+        },
+        {
+          "label": "text2",
+          "name": "text2",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "text2"
+          },
+          "link": 13
+        },
+        {
+          "label": "text3",
+          "name": "text3",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "text3"
+          },
+          "link": 14
+        }
+      ],
+      "outputs": [
+        {
+          "label": "合并后的文本",
+          "name": "合并后的文本",
+          "type": "STRING",
+          "links": [
+            15
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MultilineTextMerger",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "逗号",
+        true,
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 15,
+      "type": "LoadImage",
+      "pos": [
+        1085.53466796875,
+        159.12278747558594
+      ],
+      "size": [
+        270,
+        326
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            16
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.44",
+        "Node name for S&R": "LoadImage",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "542FD542B53884DF65088AEB183FA41A.jpg",
+        "image"
+      ]
+    },
+    {
+      "id": 16,
+      "type": "ShowText|pysssss",
+      "pos": [
+        1687.205078125,
+        167.83480834960938
+      ],
+      "size": [
+        244.10000610351562,
+        193.2636260986328
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 17
+        }
+      ],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            18
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "aac13aa7ce35b07d43633c3bbe654a38c00d74f5",
+        "Node name for S&R": "ShowText|pysssss",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "A sleeveless dress with a floral pattern in pink and white, featuring thin straps, a bow detail on the shoulder, and a flared short skirt."
+      ]
+    },
+    {
+      "id": 18,
+      "type": "TextReplacer",
+      "pos": [
+        1410.86669921875,
+        493.0118408203125
+      ],
+      "size": [
+        210,
+        189
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "text",
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 18
+        }
+      ],
+      "outputs": [
+        {
+          "label": "修改后的文本",
+          "name": "修改后的文本",
+          "type": "STRING",
+          "links": [
+            19,
+            23
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TextReplacer",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "",
+        ".",
+        "",
+        true,
+        false,
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 19,
+      "type": "ShowText|pysssss",
+      "pos": [
+        1689.906982421875,
+        494.0662841796875
+      ],
+      "size": [
+        244.10000610351562,
+        193.2636260986328
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 19
+        }
+      ],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "aac13aa7ce35b07d43633c3bbe654a38c00d74f5",
+        "Node name for S&R": "ShowText|pysssss",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "The dress is a sleeveless, floral - patterned one with pink and white colors, featuring thin straps, a bow detail at the chest, and a flared short skirt"
+      ]
+    },
+    {
+      "id": 20,
+      "type": "ShowText|pysssss",
+      "pos": [
+        2214.625244140625,
+        172.59609985351562
+      ],
+      "size": [
+        244.10000610351562,
+        193.2636260986328
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 22
+        }
+      ],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "aac13aa7ce35b07d43633c3bbe654a38c00d74f5",
+        "Node name for S&R": "ShowText|pysssss",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "change the woman's clothing to be ( The dress is a sleeveless, floral - patterned one with pink and white colors, featuring thin straps, a bow detail at the chest, and a flared short skirt )"
+      ]
+    },
+    {
+      "id": 22,
+      "type": "LoadImage",
+      "pos": [
+        1085.30322265625,
+        754.3928833007812
+      ],
+      "size": [
+        270,
+        326
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            24
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.44",
+        "Node name for S&R": "LoadImage",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "542FD542B53884DF65088AEB183FA41A.jpg",
+        "image"
+      ]
+    },
+    {
+      "id": 23,
+      "type": "ShowText|pysssss",
+      "pos": [
+        1686.9736328125,
+        763.1049194335938
+      ],
+      "size": [
+        244.10000610351562,
+        193.2636260986328
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 25
+        }
+      ],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            26
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "aac13aa7ce35b07d43633c3bbe654a38c00d74f5",
+        "Node name for S&R": "ShowText|pysssss",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "The background features a clear blue sky, multi - story buildings (including a white apartment with balconies), a wooden fence, and numerous potted flowering plants in various colored pots. There are also trees and utility poles visible."
+      ]
+    },
+    {
+      "id": 25,
+      "type": "ShowText|pysssss",
+      "pos": [
+        1689.675537109375,
+        1089.336669921875
+      ],
+      "size": [
+        244.10000610351562,
+        193.2636260986328
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 27
+        }
+      ],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "aac13aa7ce35b07d43633c3bbe654a38c00d74f5",
+        "Node name for S&R": "ShowText|pysssss",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "The background features a clear blue sky, residential buildings, green trees, and potted flowering plants"
+      ]
+    },
+    {
+      "id": 27,
+      "type": "ShowText|pysssss",
+      "pos": [
+        2220.732666015625,
+        776.642578125
+      ],
+      "size": [
+        244.10000610351562,
+        193.2636260986328
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 28
+        }
+      ],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "aac13aa7ce35b07d43633c3bbe654a38c00d74f5",
+        "Node name for S&R": "ShowText|pysssss",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "change the background to be ( The background features a clear blue sky, residential buildings, green trees, and potted flowering plants )"
+      ]
+    },
+    {
+      "id": 24,
+      "type": "TextReplacer",
+      "pos": [
+        1410.63525390625,
+        1088.2822265625
+      ],
+      "size": [
+        210,
+        189
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "text",
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 26
+        }
+      ],
+      "outputs": [
+        {
+          "label": "修改后的文本",
+          "name": "修改后的文本",
+          "type": "STRING",
+          "links": [
+            27,
+            29
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TextReplacer",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "",
+        ".",
+        "",
+        true,
+        false,
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 21,
+      "type": "GLM4VImageDescription_V2",
+      "pos": [
+        1397.318359375,
+        763.0955200195312
+      ],
+      "size": [
+        257.2691345214844,
+        261
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "图像",
+          "type": "IMAGE",
+          "link": 24
+        }
+      ],
+      "outputs": [
+        {
+          "label": "描述",
+          "name": "描述",
+          "type": "STRING",
+          "links": [
+            25
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GLM4VImageDescription_V2",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "GLM-4.1V-9B-Thinking",
+        "只描述背景，不要描述其他元素，用英文返回",
+        0.8,
+        0.6,
+        2,
+        8192,
+        1,
+        true,
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 14,
+      "type": "GLM4VImageDescription_V2",
+      "pos": [
+        1397.5498046875,
+        167.8253936767578
+      ],
+      "size": [
+        257.2691345214844,
+        261
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "图像",
+          "type": "IMAGE",
+          "link": 16
+        }
+      ],
+      "outputs": [
+        {
+          "label": "描述",
+          "name": "描述",
+          "type": "STRING",
+          "links": [
+            17
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GLM4VImageDescription_V2",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "GLM-4.1V-9B-Thinking",
+        "只描述衣服，不要描述其他元素，用英文返回",
+        0.8,
+        0.6,
+        2,
+        8192,
+        1,
+        true,
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 13,
+      "type": "MultilineTextMerger",
+      "pos": [
+        1971.153076171875,
+        168.59432983398438
+      ],
+      "size": [
+        210,
+        401
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "text3",
+          "name": "text3",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "text3"
+          },
+          "link": 23
+        }
+      ],
+      "outputs": [
+        {
+          "label": "合并后的文本",
+          "name": "合并后的文本",
+          "type": "STRING",
+          "links": [
+            22,
+            30
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MultilineTextMerger",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "空格",
+        true,
+        "change the woman's clothing to be",
+        "(",
+        "",
+        ")",
+        "",
+        "",
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 26,
+      "type": "MultilineTextMerger",
+      "pos": [
+        1977.260498046875,
+        772.6408081054688
+      ],
+      "size": [
+        210,
+        401
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "text3",
+          "name": "text3",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "text3"
+          },
+          "link": 29
+        }
+      ],
+      "outputs": [
+        {
+          "label": "合并后的文本",
+          "name": "合并后的文本",
+          "type": "STRING",
+          "links": [
+            28,
+            31
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MultilineTextMerger",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "空格",
+        true,
+        "change the background to be",
+        "(",
+        "",
+        ")",
+        "",
+        "",
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 29,
+      "type": "ShowText|pysssss",
+      "pos": [
+        2856.64208984375,
+        452.5518798828125
+      ],
+      "size": [
+        244.10000610351562,
+        193.2636260986328
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 32
+        }
+      ],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "aac13aa7ce35b07d43633c3bbe654a38c00d74f5",
+        "Node name for S&R": "ShowText|pysssss",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "change the woman's clothing to be ( A sleeveless dress with a floral pattern in pink and white, featuring thin straps, a bow detail on the shoulder, and a flared short skirt ), change the background to be ( The background features a clear blue sky, multi - story buildings (including a white apartment with balconies), a wooden fence, and numerous potted flowering plants in various colored pots There are also trees and utility poles visible ), while keeping the woman in the exact same position, scale, and pose."
+      ]
+    },
+    {
+      "id": 28,
+      "type": "MultilineTextMerger",
+      "pos": [
+        2545.687255859375,
+        400.5299072265625
+      ],
+      "size": [
+        210,
+        401
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "text1",
+          "name": "text1",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "text1"
+          },
+          "link": 30
+        },
+        {
+          "label": "text2",
+          "name": "text2",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "text2"
+          },
+          "link": 31
+        }
+      ],
+      "outputs": [
+        {
+          "label": "合并后的文本",
+          "name": "合并后的文本",
+          "type": "STRING",
+          "links": [
+            32
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MultilineTextMerger",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "逗号",
+        true,
+        "",
+        "",
+        "while keeping the woman in the exact same position, scale, and pose.",
+        "",
+        "",
+        "",
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 30,
+      "type": "Note",
+      "pos": [
+        1372.3082275390625,
+        -87.74047088623047
+      ],
+      "size": [
+        321.98199462890625,
+        159.54571533203125
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "显存不够20+的看这里",
+      "properties": {
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "显存不够跑的可下载此模型后，解压后放置对应models/LLM文件夹下，该量化模型由四哥（QQ群：309670112）提供：\nhttps://cloud.189.cn/t/ZFFZZzqeuQj2\n\n（访问码：yio3）"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      12,
+      9,
+      0,
+      12,
+      0,
+      "STRING"
+    ],
+    [
+      13,
+      7,
+      0,
+      12,
+      1,
+      "STRING"
+    ],
+    [
+      14,
+      8,
+      0,
+      12,
+      2,
+      "STRING"
+    ],
+    [
+      15,
+      12,
+      0,
+      6,
+      0,
+      "STRING"
+    ],
+    [
+      16,
+      15,
+      0,
+      14,
+      0,
+      "IMAGE"
+    ],
+    [
+      17,
+      14,
+      0,
+      16,
+      0,
+      "STRING"
+    ],
+    [
+      18,
+      16,
+      0,
+      18,
+      0,
+      "STRING"
+    ],
+    [
+      19,
+      18,
+      0,
+      19,
+      0,
+      "STRING"
+    ],
+    [
+      22,
+      13,
+      0,
+      20,
+      0,
+      "STRING"
+    ],
+    [
+      23,
+      18,
+      0,
+      13,
+      0,
+      "STRING"
+    ],
+    [
+      24,
+      22,
+      0,
+      21,
+      0,
+      "IMAGE"
+    ],
+    [
+      25,
+      21,
+      0,
+      23,
+      0,
+      "STRING"
+    ],
+    [
+      26,
+      23,
+      0,
+      24,
+      0,
+      "STRING"
+    ],
+    [
+      27,
+      24,
+      0,
+      25,
+      0,
+      "STRING"
+    ],
+    [
+      28,
+      26,
+      0,
+      27,
+      0,
+      "STRING"
+    ],
+    [
+      29,
+      24,
+      0,
+      26,
+      0,
+      "STRING"
+    ],
+    [
+      30,
+      13,
+      0,
+      28,
+      0,
+      "STRING"
+    ],
+    [
+      31,
+      26,
+      0,
+      28,
+      1,
+      "STRING"
+    ],
+    [
+      32,
+      28,
+      0,
+      29,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "基础用法",
+      "bounding": [
+        315.30975341796875,
+        79.4000015258789,
+        710.73974609375,
+        491.8600158691406
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "进阶用法，可替换其他相似功能的反推插件节点来进行自由组合，最终的输出的提示词输入到flux-kontext工作流中搭配使用",
+      "bounding": [
+        1075.30322265625,
+        85.52278900146484,
+        2035.4393310546875,
+        1207.0772705078125
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "ds": {
+      "scale": 0.42409761837248516,
+      "offset": [
+        -131.60481342129663,
+        76.20585227570403
+      ]
+    },
+    "frontendVersion": "1.23.4",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

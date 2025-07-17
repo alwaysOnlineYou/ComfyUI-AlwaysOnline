@@ -1,0 +1,15 @@
+[project]
+name = "ComfyUI-AlwaysOnline"
+description = "test node publish"
+version = "1.0.0"
+license = {file = "LICENSE"}
+
+[project.urls]
+Repository = "https://github.com/alwaysOnlineYou/ComfyUI-AlwaysOnline"
+#  Used by Comfy Registry https://registry.comfy.org
+
+[tool.comfy]
+PublisherId = "always89"
+DisplayName = "ComfyUI-AlwaysOnline"
+Icon = ""
+includes = []

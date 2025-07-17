@@ -1,0 +1,618 @@
+{
+  "id": "340a0bd3-a08b-47e4-8627-2af078d80f37",
+  "revision": 0,
+  "last_node_id": 17,
+  "last_link_id": 24,
+  "nodes": [
+    {
+      "id": 10,
+      "type": "LayerUtility: ColorPicker",
+      "pos": [
+        4441.67919921875,
+        -140.1702423095703
+      ],
+      "size": [
+        210,
+        94
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "值",
+          "name": "value",
+          "type": "STRING",
+          "links": [
+            13
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_layerstyle",
+        "ver": "c0fb64d0ebcb81c6c445a8af79ecee24bc3845b0",
+        "Node name for S&R": "LayerUtility: ColorPicker",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "#000000",
+        "HEX"
+      ],
+      "color": "rgba(38, 73, 116, 0.7)"
+    },
+    {
+      "id": 9,
+      "type": "LayerUtility: ColorPicker",
+      "pos": [
+        4456.76025390625,
+        -489.65374755859375
+      ],
+      "size": [
+        210,
+        94
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "值",
+          "name": "value",
+          "type": "STRING",
+          "links": [
+            12,
+            14
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_layerstyle",
+        "ver": "c0fb64d0ebcb81c6c445a8af79ecee24bc3845b0",
+        "Node name for S&R": "LayerUtility: ColorPicker",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "#004cff",
+        "HEX"
+      ],
+      "color": "rgba(38, 73, 116, 0.7)"
+    },
+    {
+      "id": 14,
+      "type": "SimpleMath+",
+      "pos": [
+        4456.7861328125,
+        -333.888916015625
+      ],
+      "size": [
+        210,
+        98
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "shape": 7,
+          "type": "*",
+          "link": 19
+        },
+        {
+          "name": "b",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "c",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "整数",
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            18
+          ]
+        },
+        {
+          "label": "浮点",
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_essentials",
+        "ver": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
+        "Node name for S&R": "SimpleMath+",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "a-1"
+      ]
+    },
+    {
+      "id": 15,
+      "type": "VHS_VideoInfoSource",
+      "pos": [
+        4471.58935546875,
+        45.471500396728516
+      ],
+      "size": [
+        176.1796875,
+        106
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "视频信息",
+          "name": "video_info",
+          "type": "VHS_VIDEOINFO",
+          "link": 21
+        }
+      ],
+      "outputs": [
+        {
+          "name": "fps🟨",
+          "type": "FLOAT",
+          "links": [
+            24
+          ]
+        },
+        {
+          "name": "frame_count🟨",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "duration🟨",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "width🟨",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height🟨",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "a7ce59e381934733bfae03b1be029756d6ce936d",
+        "Node name for S&R": "VHS_VideoInfoSource",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": {}
+    },
+    {
+      "id": 1,
+      "type": "VHS_LoadVideo",
+      "pos": [
+        4054.518310546875,
+        -559.1585693359375
+      ],
+      "size": [
+        362.81109619140625,
+        781.4151000976562
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "批次管理",
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            9
+          ]
+        },
+        {
+          "label": "帧计数",
+          "name": "frame_count",
+          "type": "INT",
+          "links": [
+            19
+          ]
+        },
+        {
+          "label": "音频",
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "label": "视频信息",
+          "name": "video_info",
+          "type": "VHS_VIDEOINFO",
+          "links": [
+            21
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "a7ce59e381934733bfae03b1be029756d6ce936d",
+        "Node name for S&R": "VHS_LoadVideo",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": {
+        "video": "WanVideoWrapper_I2V_00001.mp4",
+        "force_rate": 0,
+        "custom_width": 0,
+        "custom_height": 0,
+        "frame_load_cap": 0,
+        "skip_first_frames": 0,
+        "select_every_nth": 1,
+        "format": "AnimateDiff",
+        "choose video to upload": "image",
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "WanVideoWrapper_I2V_00001.mp4",
+            "type": "input",
+            "format": "video/mp4",
+            "force_rate": 0,
+            "custom_width": 0,
+            "custom_height": 0,
+            "frame_load_cap": 0,
+            "skip_first_frames": 0,
+            "select_every_nth": 1
+          }
+        }
+      }
+    },
+    {
+      "id": 17,
+      "type": "MarkdownNote",
+      "pos": [
+        3590.067138671875,
+        -608.6151733398438
+      ],
+      "size": [
+        435.7099914550781,
+        872.0534057617188
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "使用技巧",
+      "properties": {
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "# 🚬 动态水印生成器使用文档\n\n## 核心功能\n在图像/视频帧上添加可移动的文字水印，支持文生视频/图生视频工作流，水印位置根据帧索引自动更新。\n\n## 自定义参数\n| 参数 | 说明 |\n|------|------|\n| `text` | 水印文字内容 |\n| `font_size` | 字体大小 (8-256px) |\n| `font_color` | 文字颜色 (支持HEX/RGB格式) |\n| `opacity` | 透明度 (0.0-1.0) |\n| `speed` | 移动速度 (0.1-10倍速) |\n| `trajectory` | 移动轨迹模式 |\n| `font_path` | 自定义字体文件路径 |\n| `custom_trajectory` | JSON格式的自定义路径 |\n| `rotation` | 文字旋转角度 (-360°-360°) |\n| `dynamic_size` | 启用动态字体大小 |\n| `min_size`/`max_size` | 动态字体大小范围 |\n| `stroke_width` | 文字描边宽度 |\n| `stroke_color` | 描边颜色 |\n| `shadow` | 启用阴影效果 |\n| `shadow_color` | 阴影颜色 |\n| `shadow_offset` | 阴影偏移量 |\n| `blur_radius` | 模糊半径 |\n\n## 轨迹模式\n- `horizontal`: 水平移动\n- `vertical`: 垂直移动\n- `circular`: 圆形运动\n- `diagonal`: 对角线移动\n- `random`: 随机位置跳动\n- `spiral`: 螺旋运动\n- `wave`: 波浪运动\n- `bounce`: 弹跳运动\n- 自定义路径: 通过JSON坐标点定义\n\n## 高级效果\n- 自动旋转：圆形/螺旋轨迹自动跟随路径旋转\n- 动态大小：文字大小随时间波动变化\n- 描边效果：增强文字可读性\n- 阴影效果：增加立体感\n- 模糊效果：创建柔和的水印\n\n## 自定义轨迹示例\n\n### 示例1：简单矩形路径\n```json\n[\n  [0.1, 0.1],  // 左上角\n  [0.9, 0.1],  // 右上角\n  [0.9, 0.9],  // 右下角\n  [0.1, 0.9],  // 左下角\n  [0.1, 0.1]   // 返回起点\n]\n```\n水印会沿矩形边界移动，适用于需要周期性循环的路径。\n\n### 示例2：贝塞尔曲线路径\n```json\n[\n  [0.1, 0.5],\n  [0.3, 0.1],\n  [0.7, 0.9],\n  [0.9, 0.5]\n]\n```\n创建平滑的曲线运动，适合优雅的品牌水印展示。\n\n### 示例3：随机散点路径\n```json\n[\n  [0.2, 0.3], [0.8, 0.4], [0.5, 0.7], \n  [0.3, 0.8], [0.7, 0.2], [0.4, 0.5]\n]\n```\n创建看似随机但可控的运动，适合背景水印效果。\n\n## 使用技巧\n1. **路径点数量**：\n   - 建议至少提供5个点以保证流畅运动\n   - 复杂路径可使用20-50个点\n\n2. **路径闭合**：\n   - 如需循环路径，首尾点坐标应相同\n\n3. **坐标范围**：\n   - X坐标：0.0(左) → 1.0(右)\n   - Y坐标：0.0(上) → 1.0(下)\n\n4. **与速度配合**：\n   - 较低速度(0.5-2.0)：适合复杂路径\n   - 较高速度(3.0-5.0)：适合简单路径\n\n5. **动态效果增强**：\n   - 启用自动旋转使水印始终面向路径方向\n   - 动态大小增加视觉趣味性\n\n## 注意事项\n1. 路径点数量应与总帧数匹配：\n   - 100帧视频建议使用50-100个路径点\n   - 使用 `len(custom_path) ≈ total_frames / 2` 公式\n\n2. 超出屏幕处理：\n   - 坐标可超出[0,1]范围创建进出效果\n   - 例如：`[-0.1, 0.5] → [1.1, 0.5]` 实现左右穿屏\n\n3. JSON格式验证：\n   - 确保使用标准JSON格式\n   - 可通过在线JSON验证工具检查\n\n> 自定义轨迹功能提供了最大的灵活性，特别适合需要精确控制水印运动路径的品牌宣传、艺术创作等场景。通过精心设计的路径，可以创造出专业级的动态水印效果。\n"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 4,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        5151.451171875,
+        -560.1420288085938
+      ],
+      "size": [
+        331.047119140625,
+        762.7294921875
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 20
+        },
+        {
+          "label": "音频",
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "label": "批次管理",
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "frame_rate",
+          "type": "FLOAT",
+          "widget": {
+            "name": "frame_rate"
+          },
+          "link": 24
+        }
+      ],
+      "outputs": [
+        {
+          "label": "文件名",
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "4c7858ddd5126f7293dc3c9f6e0fc4c263cde079",
+        "Node name for S&R": "VHS_VideoCombine",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": {
+        "frame_rate": 16,
+        "loop_count": 0,
+        "filename_prefix": "wan_auto_watermark_%date:yyyyMMddhhmmss%",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 10,
+        "save_metadata": false,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "wan_auto_watermark_20250716222452_00001.mp4",
+            "subfolder": "",
+            "type": "temp",
+            "format": "video/h264-mp4",
+            "frame_rate": 24,
+            "workflow": "wan_auto_watermark_20250716222452_00001.png",
+            "fullpath": "/tmp/latentsync_161d9d82/wan_auto_watermark_20250716222452_00001.mp4"
+          }
+        }
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 7,
+      "type": "MovingWatermark",
+      "pos": [
+        4713.5654296875,
+        -558.8082885742188
+      ],
+      "size": [
+        400,
+        544
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 9
+        },
+        {
+          "label": "font_color",
+          "name": "font_color",
+          "type": "STRING",
+          "widget": {
+            "name": "font_color"
+          },
+          "link": 12
+        },
+        {
+          "label": "total_frames",
+          "name": "total_frames",
+          "type": "INT",
+          "widget": {
+            "name": "total_frames"
+          },
+          "link": 18
+        },
+        {
+          "label": "stroke_color",
+          "name": "stroke_color",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "stroke_color"
+          },
+          "link": 13
+        },
+        {
+          "label": "shadow_color",
+          "name": "shadow_color",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "shadow_color"
+          },
+          "link": 14
+        }
+      ],
+      "outputs": [
+        {
+          "label": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            20
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MovingWatermark",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "香烟爱上火柴",
+        12,
+        "#FF5733",
+        0.5000000000000001,
+        0.4,
+        "随机",
+        0,
+        160,
+        "/workspace/script/msyhbd.ttc",
+        "",
+        0,
+        true,
+        12,
+        60,
+        4,
+        "#000000",
+        true,
+        "#000000",
+        2,
+        0.2
+      ]
+    }
+  ],
+  "links": [
+    [
+      9,
+      1,
+      0,
+      7,
+      0,
+      "IMAGE"
+    ],
+    [
+      12,
+      9,
+      0,
+      7,
+      1,
+      "STRING"
+    ],
+    [
+      13,
+      10,
+      0,
+      7,
+      3,
+      "STRING"
+    ],
+    [
+      14,
+      9,
+      0,
+      7,
+      4,
+      "STRING"
+    ],
+    [
+      18,
+      14,
+      0,
+      7,
+      2,
+      "INT"
+    ],
+    [
+      19,
+      1,
+      1,
+      14,
+      0,
+      "*"
+    ],
+    [
+      20,
+      7,
+      0,
+      4,
+      0,
+      "IMAGE"
+    ],
+    [
+      21,
+      1,
+      3,
+      15,
+      0,
+      "VHS_VIDEOINFO"
+    ],
+    [
+      24,
+      15,
+      0,
+      4,
+      4,
+      "FLOAT"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "自动水印",
+      "bounding": [
+        4044.518310546875,
+        -641.9515380859375,
+        1525.849609375,
+        913.3841552734375
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "frontendVersion": "1.23.4",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true,
+    "ds": {
+      "scale": 0.717933090573228,
+      "offset": [
+        -3516.532000438909,
+        751.7946846439515
+      ]
+    }
+  },
+  "version": 0.4
+}

@@ -1,0 +1,630 @@
+{
+  "id": "a169fb5e-47e5-4d0a-b919-ad44a6b7f240",
+  "revision": 0,
+  "last_node_id": 11,
+  "last_link_id": 9,
+  "nodes": [
+    {
+      "id": 6,
+      "type": "GLM4VImageDescription_V2",
+      "pos": [
+        404.4611511230469,
+        80.16951751708984
+      ],
+      "size": [
+        257.2691345214844,
+        261
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "图像",
+          "type": "IMAGE",
+          "link": 4
+        },
+        {
+          "label": "用户输入",
+          "name": "用户输入",
+          "type": "STRING",
+          "widget": {
+            "name": "用户输入"
+          },
+          "link": 5
+        }
+      ],
+      "outputs": [
+        {
+          "label": "描述",
+          "name": "描述",
+          "type": "STRING",
+          "links": [
+            1,
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GLM4VImageDescription_V2",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "GLM-4.1V-9B-Thinking",
+        "简单描述这张图片内容",
+        0.8,
+        0.6,
+        2,
+        8192,
+        1,
+        true,
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 9,
+      "type": "MultilineTextMerger",
+      "pos": [
+        -492.8105773925781,
+        43.885765075683594
+      ],
+      "size": [
+        210,
+        401
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "text1",
+          "name": "text1",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "text1"
+          },
+          "link": 9
+        },
+        {
+          "label": "text2",
+          "name": "text2",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "text2"
+          },
+          "link": 6
+        }
+      ],
+      "outputs": [
+        {
+          "label": "合并后的文本",
+          "name": "合并后的文本",
+          "type": "STRING",
+          "links": [
+            7,
+            8
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MultilineTextMerger",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "换行",
+        true,
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 1,
+      "type": "JsonKeyExtractor",
+      "pos": [
+        990.335693359375,
+        82.50289916992188
+      ],
+      "size": [
+        210,
+        117
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "json文本",
+          "name": "json文本",
+          "type": "STRING",
+          "widget": {
+            "name": "json文本"
+          },
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "label": "值",
+          "name": "值",
+          "type": "STRING",
+          "links": [
+            3
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "JsonKeyExtractor",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "{}",
+        "scene1",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 3,
+      "type": "Reroute",
+      "pos": [
+        168.50738525390625,
+        615.6809692382812
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "widget": {
+            "name": "value"
+          },
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "STRING",
+          "links": [
+            5
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false,
+        "widget_ue_connectable": {}
+      }
+    },
+    {
+      "id": 10,
+      "type": "ShowText|pysssss",
+      "pos": [
+        -263.2808532714844,
+        45.81254196166992
+      ],
+      "size": [
+        364.00030517578125,
+        551.6665649414062
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 7
+        }
+      ],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "aac13aa7ce35b07d43633c3bbe654a38c00d74f5",
+        "Node name for S&R": "ShowText|pysssss",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "wan2.1生成视频prompt助理\n\n你来充当一位有艺术气息的wan2.1生成视频prompt助理。\n\n任务\n\n根据用户输入的元素信息和公式类型，你参考对应的公式类型，但是不要照搬示例，发挥你的想象力，补充合理的视频画面细节，最后生成详细的prompt给用户。\n\n公式类型\n基础公式：主体，场景，运动\n比如 “小孩，操场，奔跑”，主要突出核心元素，简洁提供创意方向。\n\n进阶公式：主体描述，场景描述，运动描述，景别、拍摄角度、镜头类型，风格 1，风格 2\n例如 “一位穿着古装的老人，古色古香的庭院，手持折扇缓缓踱步，全景、仰拍、固定镜头，典雅，古朴风格”，通过更丰富细节，构建更清晰画面。\n\n运镜公式：运镜方式，主体描述，场景描述，运动描述，景别、拍摄角度、镜头类型，风格 1，风格 2\n像 “推轨运镜，身姿矫健的运动员，现代化的体育馆，快速带球突破上篮，近景、侧拍、移动镜头，热血，激昂风格”，着重对运镜方式进行了明确\n\n形变公式：独特运镜方式，对具有形变能力主体的详细描述，场景细致描述，形变运动具体描述，景别、拍摄角度、镜头类型，风格 1，风格 2\n示例：旋转运镜，那团晶莹剔透、仿若果冻般的胶体，光线柔和的实验室操作台上，在机械臂的压力下，以不规则形态延展、收缩，同时闪烁奇异光芒，近景、侧拍、移动镜头，科技感，神秘风格\n\n限制\n我给你的内容可能是中英文混写，你要用中文返回prompt\n不要解释你的prompt，直接输出prompt。\n\n用户输入内容\n根据图片人物使用运镜公式，以镜头开场女子转身看着镜头跳舞为主题，给我6个连贯的分镜prompt，分镜过度要保证人物一致性，画面稳定流畅，16fps，不要描述背景信息，用JSON格式返回：\n\n\"scene1\" : \"...\",\n\"scene2\" : \"...\""
+      ]
+    },
+    {
+      "id": 5,
+      "type": "LoadImage",
+      "pos": [
+        172.37277221679688,
+        76.93510437011719
+      ],
+      "size": [
+        210,
+        326
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            4
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.43",
+        "Node name for S&R": "LoadImage",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "ComfyUI_temp_okpfa_00025_.png",
+        "image"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "Text Multiline",
+      "pos": [
+        -899.5505981445312,
+        544.8637084960938
+      ],
+      "size": [
+        379.68292236328125,
+        160.5862579345703
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            6
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "was-node-suite-comfyui",
+        "ver": "1cd8d304eda256c412b8589ce1f00be3c61cf9ec",
+        "Node name for S&R": "Text Multiline",
+        "widget_ue_connectable": {},
+        "aux_id": "WASasquatch/was-node-suite-comfyui"
+      },
+      "widgets_values": [
+        "根据图片人物使用运镜公式，以镜头开场女子转身看着镜头跳舞为主题，给我6个连贯的分镜prompt，分镜过度要保证人物一致性，画面稳定流畅，16fps，不要描述背景信息，用JSON格式返回：\n{\n\"scene1\" : \"...\",\n\"scene2\" : \"...\"\n}",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 4,
+      "type": "ShowText|pysssss",
+      "pos": [
+        986.2200317382812,
+        257.09149169921875
+      ],
+      "size": [
+        223.56883239746094,
+        147.20947265625
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "aac13aa7ce35b07d43633c3bbe654a38c00d74f5",
+        "Node name for S&R": "ShowText|pysssss",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "横摇运镜，身着酒红色连体裤的女子，街道，缓缓转身面向镜头，中景、平拍、手持镜头，优雅，灵动"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "ShowText|pysssss",
+      "pos": [
+        683.86083984375,
+        78.77696990966797
+      ],
+      "size": [
+        276.9850769042969,
+        293.2365417480469
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "aac13aa7ce35b07d43633c3bbe654a38c00d74f5",
+        "Node name for S&R": "ShowText|pysssss",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "{\n  \"scene1\": \"横摇运镜，身着酒红色连体裤的女子，街道，缓缓转身面向镜头，中景、平拍、手持镜头，优雅，灵动\",\n  \"scene2\": \"推镜运镜，女子，街道，轻快舞步，中景、平拍、手持镜头，优雅，灵动\",\n  \"scene3\": \"拉镜运镜，女子，街道，舞步旋转，中景、平拍、手持镜头，优雅，灵动\",\n  \"scene4\": \"横摇+推镜运镜，女子，街道，舞步摆动，中景、平拍、手持镜头，优雅，灵动\",\n  \"scene5\": \"推镜+旋转运镜，女子，街道，舞步跳跃，中景、平拍、手持镜头，优雅，灵动\",\n  \"scene6\": \"拉镜+横摇运镜，女子，街道，舞步结束，中景、平拍、手持镜头，优雅，灵动\"\n}"
+      ]
+    },
+    {
+      "id": 7,
+      "type": "Text Multiline",
+      "pos": [
+        -905.1791381835938,
+        40.60210418701172
+      ],
+      "size": [
+        385.1928405761719,
+        454.15313720703125
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "was-node-suite-comfyui",
+        "ver": "1cd8d304eda256c412b8589ce1f00be3c61cf9ec",
+        "Node name for S&R": "Text Multiline",
+        "widget_ue_connectable": {},
+        "aux_id": "WASasquatch/was-node-suite-comfyui"
+      },
+      "widgets_values": [
+        "wan2.1生成视频prompt助理\n\n你来充当一位有艺术气息的wan2.1生成视频prompt助理。\n\n任务\n\n根据用户输入的元素信息和公式类型，你参考对应的公式类型，但是不要照搬示例，发挥你的想象力，补充合理的视频画面细节，最后生成详细的prompt给用户。\n\n公式类型\n基础公式：主体，场景，运动\n比如 “小孩，操场，奔跑”，主要突出核心元素，简洁提供创意方向。\n\n进阶公式：主体描述，场景描述，运动描述，景别、拍摄角度、镜头类型，风格 1，风格 2\n例如 “一位穿着古装的老人，古色古香的庭院，手持折扇缓缓踱步，全景、仰拍、固定镜头，典雅，古朴风格”，通过更丰富细节，构建更清晰画面。\n\n运镜公式：运镜方式，主体描述，场景描述，运动描述，景别、拍摄角度、镜头类型，风格 1，风格 2\n像 “推轨运镜，身姿矫健的运动员，现代化的体育馆，快速带球突破上篮，近景、侧拍、移动镜头，热血，激昂风格”，着重对运镜方式进行了明确\n\n形变公式：独特运镜方式，对具有形变能力主体的详细描述，场景细致描述，形变运动具体描述，景别、拍摄角度、镜头类型，风格 1，风格 2\n示例：旋转运镜，那团晶莹剔透、仿若果冻般的胶体，光线柔和的实验室操作台上，在机械臂的压力下，以不规则形态延展、收缩，同时闪烁奇异光芒，近景、侧拍、移动镜头，科技感，神秘风格\n\n限制\n我给你的内容可能是中英文混写，你要用中文返回prompt\n不要解释你的prompt，直接输出prompt。\n\n用户输入内容\n",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 11,
+      "type": "Note",
+      "pos": [
+        384.64630126953125,
+        508.118408203125
+      ],
+      "size": [
+        321.98199462890625,
+        159.54571533203125
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "显存不够20+的看这里",
+      "properties": {
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "显存不够跑的可下载此模型后，解压后放置对应models/LLM文件夹下，该量化模型由四哥（QQ群：309670112）提供：\nhttps://cloud.189.cn/t/ZFFZZzqeuQj2\n\n（访问码：yio3）"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      1,
+      6,
+      0,
+      1,
+      0,
+      "STRING"
+    ],
+    [
+      2,
+      6,
+      0,
+      2,
+      0,
+      "STRING"
+    ],
+    [
+      3,
+      1,
+      0,
+      4,
+      0,
+      "STRING"
+    ],
+    [
+      4,
+      5,
+      0,
+      6,
+      0,
+      "IMAGE"
+    ],
+    [
+      5,
+      3,
+      0,
+      6,
+      1,
+      "STRING"
+    ],
+    [
+      6,
+      8,
+      0,
+      9,
+      1,
+      "STRING"
+    ],
+    [
+      7,
+      9,
+      0,
+      10,
+      0,
+      "STRING"
+    ],
+    [
+      8,
+      9,
+      0,
+      3,
+      0,
+      "*"
+    ],
+    [
+      9,
+      7,
+      0,
+      9,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "GLM分镜反推示例",
+      "bounding": [
+        154.97157287597656,
+        -26.269668579101562,
+        1077.9549560546875,
+        487.7044982910156
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "用户输入设定",
+      "bounding": [
+        -915.1791381835938,
+        -32.997894287109375,
+        1036.3465576171875,
+        748.4478759765625
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ue_links": [],
+    "ds": {
+      "scale": 0.7072127682928148,
+      "offset": [
+        883.5122653869614,
+        125.40432139531751
+      ]
+    },
+    "links_added_by_ue": [],
+    "frontendVersion": "1.23.4",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

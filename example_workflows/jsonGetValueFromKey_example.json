@@ -1,0 +1,228 @@
+{
+  "id": "4f60b7a9-de62-4b31-88ee-b1fa6b62d7cb",
+  "revision": 0,
+  "last_node_id": 29,
+  "last_link_id": 20,
+  "nodes": [
+    {
+      "id": 27,
+      "type": "ShowText|pysssss",
+      "pos": [
+        1403.9420166015625,
+        680.428955078125
+      ],
+      "size": [
+        293.3605651855469,
+        228.19602966308594
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 19
+        }
+      ],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "aac13aa7ce35b07d43633c3bbe654a38c00d74f5",
+        "Node name for S&R": "ShowText|pysssss",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "value1"
+      ]
+    },
+    {
+      "id": 26,
+      "type": "JsonKeyExtractor",
+      "pos": [
+        992.38427734375,
+        678.5249633789062
+      ],
+      "size": [
+        400,
+        310
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "值",
+          "name": "值",
+          "type": "STRING",
+          "links": [
+            19
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "JsonKeyExtractor",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "{\n  \"key1\": \"value1\",\n  \"key2\": \"value2\",\n  \"key3\": {\n    \"nestedKey1\": \"nestedValue1\",\n    \"nestedKey2\": \"nestedValue2\"\n  },\n  \"key4\": [\"arrayItem1\", \"arrayItem2\"]\n}",
+        "key1",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 29,
+      "type": "ShowText|pysssss",
+      "pos": [
+        2143.641845703125,
+        679.62890625
+      ],
+      "size": [
+        293.3605651855469,
+        228.19602966308594
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 20
+        }
+      ],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "aac13aa7ce35b07d43633c3bbe654a38c00d74f5",
+        "Node name for S&R": "ShowText|pysssss",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Beijing"
+      ]
+    },
+    {
+      "id": 28,
+      "type": "JsonKeyExtractor",
+      "pos": [
+        1727.2657470703125,
+        677.63916015625
+      ],
+      "size": [
+        410,
+        320
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "值",
+          "name": "值",
+          "type": "STRING",
+          "links": [
+            20
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "JsonKeyExtractor",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "{\n    \"user\": {\n        \"name\": \"Alice\",\n        \"age\": 30,\n        \"addresses\": [\n            {\n                \"city\": \"Beijing\",\n                \"zip\": \"100000\"\n            },\n            {\n                \"city\": \"Shanghai\",\n                \"zip\": \"200000\"\n            }\n        ],\n        \"scores\": [\n            85,\n            92,\n            78\n        ],\n        \"active\": true\n    }\n}",
+        "user.addresses[0].city",
+        [
+          false,
+          true
+        ]
+      ]
+    }
+  ],
+  "links": [
+    [
+      19,
+      26,
+      0,
+      27,
+      0,
+      "STRING"
+    ],
+    [
+      20,
+      28,
+      0,
+      29,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "基本",
+      "bounding": [
+        982.38427734375,
+        604.9249877929688,
+        725.9183349609375,
+        404.6000061035156
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "复杂",
+      "bounding": [
+        1717.2657470703125,
+        604.0391845703125,
+        729.7366943359375,
+        403.6000061035156
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1,
+      "offset": [
+        -967.38427734375,
+        -500.63916015625
+      ]
+    },
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "frontendVersion": "1.23.4",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
