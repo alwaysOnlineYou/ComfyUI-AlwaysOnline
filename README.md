@@ -26,10 +26,10 @@ pip install git+https://github.com/huggingface/transformers.git
 |------|
 |纯文本反推支持推理模式：sdpa、flash_attention_2，如需用flash_attention_2，请先安装flash_attention_2依赖：
 ```
-pip install flash-attn --no-build-isolation|
+pip install flash-attn --no-build-isolation
 ```
 
-# 节点详细使用请见以下内容，还可安装后在工作流-浏览模板-ComfyUI-AlwaysOnline自定义模板下浏览示例工作流或在本仓库目录文件夹exampl_workflows下载后使用
+# 节点详细使用请见以下内容，还可安装后在工作流-浏览模板-ComfyUI-AlwaysOnline自定义模板下浏览示例工作流或在本仓库目录文件夹example_workflows下载后使用
 
 ## 🚬 动态水印生成器使用说明
 
