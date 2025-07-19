@@ -28,10 +28,10 @@ pip install git+https://github.com/huggingface/transformers.git
 |------|
 |Pure text reverse inference supports inference modes: sdpa, flash_attention_2. To use flash_attention_2, first install its dependencies:
 ```
-pip install flash-attn --no-build-isolation|
+pip install flash-attn --no-build-isolation
 ```
 
-# For detailed node usage, see below. After installation, you can browse example workflows under Templates > ComfyUI-AlwaysOnline in the workflow browser, or download them from the exampl_workflows folder in this repository.
+# For detailed node usage, see below. After installation, you can browse example workflows under Templates > ComfyUI-AlwaysOnline in the workflow browser, or download them from the example_workflows folder in this repository.
 
 ## 🚬 Dynamic Watermark Generator Instructions
 
